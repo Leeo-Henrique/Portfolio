@@ -52,7 +52,7 @@ export const Home = (): JSX.Element => {
             <Text type="body1" color="grey2">
               Minha missão com o desenvolvimento web é trazer para a internet
               acessibilidade, segurança e velocidade para todos. Possuo
-              experiência de mil horas em HTML, CSS, JavaScript, React Podendo
+              experiência de mais de mil horas em HTML, CSS, JavaScript, React Podendo
               criar do zero um e-commerce em ReactJS ou JavaScript. Atualmente
               me especializando em Back-end para me tornar um desenvolvedor
               Full-stack, estudando algumas tecnologias como Docker, NodeJS,
@@ -63,7 +63,7 @@ export const Home = (): JSX.Element => {
                 Veja meus projetos
               </Button>
               <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+                Veja meu portfolio no github
               </Button>
               <Button
                 color="grey5"
