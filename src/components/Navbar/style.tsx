@@ -34,6 +34,7 @@ export const LogoTipoText = styled("span", {
   "@mobile": {
     fontSize: "1rem",
   },
+  cursor: "pointer",
 });
 
 export const NavbarLinks = styled(Flex, {

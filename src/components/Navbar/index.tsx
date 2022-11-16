@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
-import "./styles.css"
+import "./styles.css";
 import { userData } from "@/utils/userData";
 
 import {
@@ -22,10 +22,7 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
-
   const isWide = useMedia({ maxWidth: "991px" });
-
-  document.title = userData.nameUser;
 
   const [open, setOpen] = useState(false);
 
@@ -38,7 +35,11 @@ export const NavBar = (): JSX.Element => {
       <Container>
         <NavbarMobileArea>
           <LogoTipo>
-            <LogoTipoText>{userData.nameUser}</LogoTipoText>
+            <LogoTipoText
+              onClick={(e) => window.location.reload()}
+            >
+              {userData.nameUser}
+            </LogoTipoText>
           </LogoTipo>
           {isWide && (
             <Button
@@ -50,9 +51,7 @@ export const NavBar = (): JSX.Element => {
             </Button>
           )}
         </NavbarMobileArea>
-        <Flex>
-          {isWide ? open && <NavLinks /> : <NavLinks />}
-        </Flex>
+        <Flex>{isWide ? open && <NavLinks /> : <NavLinks />}</Flex>
       </Container>
     </NavbarWrapper>
   );
@@ -64,14 +63,32 @@ export const NavLinks = (): JSX.Element => {
       <Button type="btLink" as="a" color="grey4" href={`#home`} className="BTN">
         Home
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#projects`} className="BTN">
-        Projects
+      <Button
+        type="btLink"
+        as="a"
+        color="grey4"
+        href={`#projects`}
+        className="BTN"
+      >
+        Projetos
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#contact`} className="BTN">
-        Contact
+      <Button
+        type="btLink"
+        as="a"
+        color="grey4"
+        href={`#contact`}
+        className="BTN"
+      >
+        Contatos
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#social-media`} className="BTN">
-        Social Media
+      <Button
+        type="btLink"
+        as="a"
+        color="grey4"
+        href={`#social-media`}
+        className="BTN"
+      >
+        Redes Sociais
       </Button>
     </NavbarLinks>
   );
