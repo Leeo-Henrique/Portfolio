@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useMedia from "use-media";
+import "./styles.css"
 import { userData } from "@/utils/userData";
 
 import {
@@ -60,16 +61,16 @@ export const NavBar = (): JSX.Element => {
 export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
-      <Button type="btLink" as="a" color="grey4" href={`#home`}>
+      <Button type="btLink" as="a" color="grey4" href={`#home`} className="BTN">
         Home
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#projects`}>
+      <Button type="btLink" as="a" color="grey4" href={`#projects`} className="BTN">
         Projects
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#contact`}>
+      <Button type="btLink" as="a" color="grey4" href={`#contact`} className="BTN">
         Contact
       </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
+      <Button type="btLink" as="a" color="grey4" href={`#social-media`} className="BTN">
         Social Media
       </Button>
     </NavbarLinks>

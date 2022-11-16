@@ -1,0 +1,6 @@
+.BTN {
+  transition: ease-in-out .3s;
+}
+.BTN:hover {
+  color: red;
+}
